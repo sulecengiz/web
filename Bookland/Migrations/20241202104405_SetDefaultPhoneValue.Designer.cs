@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bookland.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20241130181959_MakeAddressNullable")]
-    partial class MakeAddressNullable
+    [Migration("20241202104405_SetDefaultPhoneValue")]
+    partial class SetDefaultPhoneValue
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,7 +125,6 @@ namespace Bookland.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

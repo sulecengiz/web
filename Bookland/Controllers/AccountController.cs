@@ -26,9 +26,9 @@ namespace Bookland.Controllers
             return View();
         }
 
-        // Login POST
+       // Login POST
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public async Task<IActionResult> Login(string username, string password)
         {
             var user = _context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
 
@@ -45,7 +45,8 @@ namespace Bookland.Controllers
                     IsPersistent = true // Kullanıcıyı oturum açtıktan sonra hatırlamak için
                 };
 
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+                // Asenkron işlem için await ekliyoruz
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
                 // Başarılı girişte ana sayfaya yönlendir
                 return RedirectToAction("Index", "Home");
@@ -55,6 +56,7 @@ namespace Bookland.Controllers
             ViewBag.ErrorMessage = "Geçersiz kullanıcı adı veya şifre.";
             return View();
         }
+
 
         // Register GET
         [HttpGet]

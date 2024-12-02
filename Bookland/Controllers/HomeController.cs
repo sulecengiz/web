@@ -25,8 +25,8 @@ public class HomeController : Controller
             return RedirectToAction("Login", "Account");
         }
 
-        var products = context.Products.Include(p => p.Category).ToList();
-        return View(products);
+        // Eğer kullanıcı giriş yapmışsa, ana sayfayı göster
+        return View();
     }
 
 }

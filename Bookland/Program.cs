@@ -25,7 +25,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+// Middleware'leri ekleyin
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
+// Authentication ve Authorization middleware'lerini ekleyin
+app.UseAuthentication();  // Kullanıcı kimlik doğrulaması
 
 app.UseAuthorization();
 

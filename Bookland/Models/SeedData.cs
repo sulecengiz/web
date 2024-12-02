@@ -1,51 +1,35 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace Bookland.Models {
-public static class SeedData {
+    public static class SeedData {
+        public static void EnsurePopulated(IApplicationBuilder app) {
+            using var scope = app.ApplicationServices.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<StoreDbContext>();
 
-    //IApplicationBuilder interface used to register middleware components to handle HTTP requests
-    public static void EnsurePopulated(IApplicationBuilder app) {
-        StoreDbContext context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<StoreDbContext>();
-        
-        if (context.Database.GetPendingMigrations().Any()) {
-            context.Database.Migrate();
-        }
-        //If there are no objects in the database, then the database is populated using a collection of Product objects 
-        
-        if(!context.ProductCategories.Any()){
-            context.ProductCategories.AddRange(
-                new ProductCategory {
-                    ProductCategoryID = 1,
-                    Name = "Watersports",
-                    Description = "Products for activities conducted on water bodies."
-                },
-                new ProductCategory {
-                    ProductCategoryID = 2,
-                    Name = "Volleyball",
-                    Description = "Products for volleyball."
-                }
-            );
-            context.SaveChanges();
-        }
+            // Migration'ları kontrol et ve uygula
+            if (context.Database.GetPendingMigrations().Any()) {
+                context.Database.Migrate();
+            }
 
-        if (!context.Products.Any()) {
-            context.Products.AddRange(
-                new Product {
-                    Name = "Kayak",
-                    Description = "A boat for one person",
-                    Price = 15000,
-                    ProductCategoryID = 1,
-                    //Category = "Watersports"
+            // User tablosunda veri yoksa yeni kullanıcı ekle
+            if (!context.Users.Any()) {
+                context.Users.AddRange(
+                    new User {
+                        Username = "Jane Doe",
+                        Email = "jane.doe@example.com",
+                        Password = "1234",
+                        Phone = "123-456-7890"
+                        // Phone alanı isteğe bağlı bırakıldı
                     },
-                    
-                new Product {
-                    Name = "Lifejacket",
-                    Description = "Protective and fashionable",
-                    Price = 1000,
-                    ProductCategoryID = 1,
-                    //Category = "Watersports"
+                    new User {
+                        Username = "sulecengiz",
+                        Email = "sule@mail.com",
+                        Password = "1234", // İsteğe bağlı olarak değer atanabilir
+                        Phone = "123-456-7899"
                     }
-                    );
+                );
+
+                // Veritabanına kaydet
                 context.SaveChanges();
             }
         }

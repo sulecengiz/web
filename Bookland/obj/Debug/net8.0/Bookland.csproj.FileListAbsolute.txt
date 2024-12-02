@@ -156,3 +156,4 @@ D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\refint\Bookland.dll
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.pdb
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.genruntimeconfig.cache
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\ref\Bookland.dll
+D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.sourcelink.json
