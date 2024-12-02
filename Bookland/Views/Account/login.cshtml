@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" id="username" name="username" required />
+    </div>
+    <div>
+        <label for="password">Şifre</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit">Giriş Yap</button>
+</form>
+<p>Hesabınız yok mu? <a href="/Account/register">Kaydol</a></p>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color:red;">
+        @ViewBag.ErrorMessage
+    </div>
+}
