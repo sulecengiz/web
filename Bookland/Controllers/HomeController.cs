@@ -15,9 +15,17 @@ public class HomeController : Controller
     {
         context = _context;
     }
+    public async Task<IActionResult> Index()
+    {
+        // Popülerlik sırasına göre kitapları çek
+        var books = await context.Products
+            .OrderByDescending(b => b.Popularity) // Popülerlik sırasına göre
+            .ToListAsync();
 
+        return View(books);
+    }
    // Ana sayfa
-    public IActionResult Index()
+    public IActionResult Login()
     {
         // Kullanıcı giriş yapmamışsa login sayfasına yönlendir
         if (!User.Identity.IsAuthenticated)
@@ -26,7 +34,7 @@ public class HomeController : Controller
         }
 
         // Eğer kullanıcı giriş yapmışsa, ana sayfayı göster
-        return View();
+        return View("Index", "Home");
     }
 
 }

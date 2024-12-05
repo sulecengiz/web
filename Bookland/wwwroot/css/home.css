@@ -1,0 +1,30 @@
+.card {
+    width: 210px; /* Kart genişliği */
+    height: 510px; /* Kart yüksekliği */
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* İçerik taşmasını önle */
+    text-align: center; /* Metni ortala */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-outline-danger {
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff5a5f;
+    color: #fff;
+}

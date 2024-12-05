@@ -1,8 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Ana Sayfa";
-}
+﻿@model IEnumerable<Bookland.Models.Product>
+<head>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</head>
+<h1>Popüler Kitaplar</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Hoş Geldiniz</h1>
-    <p>Giriş yapmak için <button href="https://learn.microsoft.com/aspnet/core">Gririş Yap</button>tıklayınız.</p>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@product.ImageUrl" class="card-img-top" alt="@product.Title" />
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title</h5>
+                    <p class="card-text">Yazar: @product.Author</p>
+                    <p class="card-text">Fiyat: @product.Price ₺</p>
+                    <button class="btn btn-primary">Sepete Ekle</button>
+                    <button class="btn btn-outline-danger float-end">
+                        <i class="fa fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+

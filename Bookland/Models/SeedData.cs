@@ -19,17 +19,43 @@ namespace Bookland.Models {
                         Email = "jane.doe@example.com",
                         Password = "1234",
                         Phone = "123-456-7890"
-                        // Phone alanı isteğe bağlı bırakıldı
                     },
                     new User {
                         Username = "sulecengiz",
                         Email = "sule@mail.com",
-                        Password = "1234", // İsteğe bağlı olarak değer atanabilir
+                        Password = "1234",
                         Phone = "123-456-7899"
                     }
                 );
 
-                // Veritabanına kaydet
+                // Kullanıcı verilerini kaydet
+                context.SaveChanges();
+            }
+
+            // Product tablosunda veri yoksa yeni ürünler ekle
+            if (!context.Products.Any()) {
+                context.Products.AddRange(
+                    new Product {
+                        Title = "Sapiens",
+                        Author = "Yuval Noah Harari",
+                        Price = 49.99m,
+                        ImageUrl = "/images/sapiens.jpg"
+                    },
+                    new Product {
+                        Title = "1984",
+                        Author = "George Orwell",
+                        Price = 29.99m,
+                        ImageUrl = "/images/1984.jpg"
+                    },
+                    new Product {
+                        Title = "Dune",
+                        Author = "Frank Herbert",
+                        Price = 39.99m,
+                        ImageUrl = "/images/dune.jpg"
+                    }
+                );
+
+                // Ürün verilerini kaydet
                 context.SaveChanges();
             }
         }

@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 namespace Bookland.Models{
     public class User{
+        [Key]
         public int UserID {get; set;}
         [Required(ErrorMessage = "Kullanıcı adı gereklidir.")]
         public string? Username { get; set; }

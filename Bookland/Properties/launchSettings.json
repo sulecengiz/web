@@ -8,6 +8,8 @@
       "sslPort": 44378
     }
   },
+  "applicationUrl": "http://localhost:5106;https://localhost:7106",
+
   "profiles": {
     "http": {
       "commandName": "Project",

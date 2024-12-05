@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nRsjvWata2vA3eyevdCRJoEXGrEisryAXea822t5uBo=",
+  "Hash": "47wlYrELJu3JULRKEjoMxaQjUkBUYGM2K0SoGCB8BHM=",
   "Source": "Bookland",
   "BasePath": "_content/Bookland",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\MasaüstüDosyaları\\web\\Bookland\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Bookland.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\home.css",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
     },
     {
       "Identity": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\site.css",

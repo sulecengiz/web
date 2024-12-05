@@ -1,22 +1,52 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Genel Ayarlar */
 body {
-  margin-bottom: 60px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f3eb; /* Hafif krem arka plan */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Varsayılan yazı rengi */
+}
+
+/* Navbar Tasarımı */
+.navbar {
+  background-color: #8d5524; /* Sıcak kahverengi ton */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 16px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c89f72; /* Açık kahverengi */
+  background-color: rgba(255, 255, 255, 0.2); /* Şeffaf beyaz arka plan */
+  border-radius: 5px;
+}
+
+.form-control {
+  border-radius: 20px; /* Arama kutusunu yuvarlat */
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.btn-outline-success {
+  color: #fff;
+  border-color: #c89f72;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover {
+  background-color: #c89f72;
+  color: #fff;
 }

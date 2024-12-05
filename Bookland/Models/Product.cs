@@ -4,14 +4,11 @@ namespace Bookland.Models{
     public class Product{
         [Key]
         public long ProductID {get; set;}
-
-        public string Name {get; set;} = String.Empty;
-
-        public string Description {get; set;} = String.Empty;
-
-        public decimal Price {get; set;}
-        public long ProductCategoryID {get; set;} //can be only one category
-        //public ICollection<ProductReview> Reviews {get; set;} //can be zero to many reviews
-        public virtual ProductCategory Category {get; set;}
+        public string? Title { get; set; }
+        public string? Author { get; set; }
+        public decimal Price { get; set; }
+        public string? Description { get; set; } // Açıklama
+        public string? ImageUrl { get; set; }
+        public int Popularity { get; set; } // Popülerlik değeri (örn. satış sayısı)
     }
 }

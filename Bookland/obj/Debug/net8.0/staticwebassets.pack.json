@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Bookland.bundle.scp.css"
     },
     {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

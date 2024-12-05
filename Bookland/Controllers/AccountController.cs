@@ -36,7 +36,7 @@ namespace Bookland.Controllers
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, user.Username)
+                    new Claim(ClaimTypes.Name, username)
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -69,6 +69,11 @@ namespace Bookland.Controllers
         [HttpPost]
         public IActionResult Register(string Email,string Username, string Password, string ConfirmPassword)
         {
+            if (_context.Users.Any(u => u.Username == Username))
+            {
+                ModelState.AddModelError(string.Empty, "Bu kullanıcı adı zaten mevcut.");
+                return View();
+            }
             if (Password != ConfirmPassword)
             {
                 ViewBag.ErrorMessage = "Şifreler eşleşmiyor.";
