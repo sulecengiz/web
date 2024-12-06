@@ -9,12 +9,40 @@
       "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\1984.jpg",
+      "PackagePath": "staticwebassets\\images\\1984.jpg"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\Bookland.png",
+      "PackagePath": "staticwebassets\\images\\Bookland.png"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\Bookland1.png",
+      "PackagePath": "staticwebassets\\images\\Bookland1.png"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\dune.jpg",
+      "PackagePath": "staticwebassets\\images\\dune.jpg"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\logo.webp",
+      "PackagePath": "staticwebassets\\images\\logo.webp"
+    },
+    {
+      "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\images\\sapiens.jpg",
+      "PackagePath": "staticwebassets\\images\\sapiens.jpg"
     },
     {
       "Id": "D:\\MasaüstüDosyaları\\web\\Bookland\\wwwroot\\js\\site.js",

@@ -1,52 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
 /* Genel Ayarlar */
 body {
-  font-family: 'Arial', sans-serif;
   background-color: #f8f3eb; /* Hafif krem arka plan */
   margin: 0;
   padding: 0;
   color: #333; /* Varsayılan yazı rengi */
 }
-
-/* Navbar Tasarımı */
-.navbar {
-  background-color: #8d5524; /* Sıcak kahverengi ton */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+.navbar-expand-lg .logo img {
+  width: 210px; /* İstediğiniz daha küçük boyut */
+  height: auto;
+  margin-right: 10px; /* Sağındaki boşluk */
 }
 
-.navbar-brand {
+/* Navbar için logo alanının hizalanması */
+.navbar-expand-lg .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar'daki metin ile logonun hizalanması */
+.navbar .navbar-brand {
+  font-family: 'Nunito', sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #fff;
+}
+
+/* Daha küçük logo için navbar'ın sağdaki öğeleri ile orantılı hizalama */
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Navbar Tasarımı */
+.navbar {
+  background: rgba(71,60,56,255);/* linear-gradient(90deg, #4c3b31, #52342f, #7d635a); */ /* Kahverengi geçiş efekti */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Daha modern gölge */
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #f8e7d3; /* Açık bej ton */
   text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Hafif yazı gölgesi */
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #fff; /* Daha belirgin beyaz */
 }
 
 .navbar-nav .nav-link {
-  color: #fff;
+  color: #f8e7d3; /* Açık bej */
   margin-right: 15px;
   font-size: 16px;
+  font-weight: 500;
   transition: color 0.3s, background-color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #c89f72; /* Açık kahverengi */
-  background-color: rgba(255, 255, 255, 0.2); /* Şeffaf beyaz arka plan */
+  color: #ffe6c3; /* Daha parlak bej */
+  background-color: rgba(255, 255, 255, 0.1); /* Hafif şeffaf beyaz arka plan */
   border-radius: 5px;
 }
 
 .form-control {
   border-radius: 20px; /* Arama kutusunu yuvarlat */
-  border: 1px solid #ddd;
+  border: 1px solid #ccc; /* Daha açık çerçeve */
   padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif iç gölge */
 }
 
 .btn-outline-success {
   color: #fff;
-  border-color: #c89f72;
+  border-color: #a1887f; /* Geçiş tonuyla uyumlu */
   background-color: transparent;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn-outline-success:hover {
-  background-color: #c89f72;
+  background-color: #a1887f; /* Kahverengi geçiş tonu */
   color: #fff;
+  border-color: #8d6e63;
+}
+
+.btn-outline-success:active {
+  background-color: #8d6e63;
+  color: #fff;
+  border-color: #6d4c41;
+}
+
+nav div.collapse a {
+  color: white;
+  font-weight: 500;
+}
+
+form.d-flex {
+  margin-left: 50px;
 }

@@ -23,6 +23,7 @@ namespace Bookland.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            /* ViewBag.HideNavbar = true; */
             return View();
         }
 
@@ -54,6 +55,7 @@ namespace Bookland.Controllers
 
             // Giriş hatalı ise tekrar login sayfasına yönlendir
             ViewBag.ErrorMessage = "Geçersiz kullanıcı adı veya şifre.";
+            
             return View();
         }
 
@@ -62,6 +64,7 @@ namespace Bookland.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            /* ViewBag.HideNavbar = true; */
             return View();
         }
 

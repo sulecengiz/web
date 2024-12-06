@@ -1,25 +1,81 @@
 @{
-    ViewData["Title"] = "Login";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Login</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/css/login.css">
+    
+</head>
 
-<form method="post">
-    <div>
-        <label for="username">Kullanıcı Adı</label>
-        <input type="text" id="username" name="username" required />
-    </div>
-    <div>
-        <label for="password">Şifre</label>
-        <input type="password" id="password" name="password" required />
-    </div>
-    <button type="submit">Giriş Yap</button>
-</form>
-<p>Hesabınız yok mu? <a href="/Account/register">Kaydol</a></p>
+<body>
+    <div class="container" id="container">
+        <!-- Sign-Up Form -->
+        <div class="form-container sign-up">
+            <form asp-controller="Account" asp-action="Register" method="post">
+                <h1>Hesap Oluştur</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>veya kayıt için e-postanızı kullanın</span>
+                <input type="text" name="Username" id="username" placeholder="Username" required>
+                <input type="email" name="Email" id="email" placeholder="Email" required>
+                <input type="password" name="Password" id="password" placeholder="Password" required>
+                <input type="password" name="ConfirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">kayıt Ol</button>
+            </form>
+        </div>
 
-@if (ViewBag.ErrorMessage != null)
-{
-    <div style="color:red;">
-        @ViewBag.ErrorMessage
+        <!-- Sign-In Form -->
+        <div class="form-container sign-in">
+            <form asp-controller="Account" asp-action="Login" method="post">
+                <h1>Giriş Yap</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>veya kullanıcı adınızı ve şifrenizi kullanın</span>
+                <input type="text" name="Username" id="username" placeholder="Username" required>
+                <input type="password" name="Password" id="password" placeholder="Password" required>
+                <a href="#">Şifreni mi unuttun?</a>
+                <button type="submit">Giriş Yap</button>
+            </form>
+
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">
+                    <p>@ViewBag.ErrorMessage</p>
+                </div>
+            }
+        </div>
+
+        <!-- Toggle Panels -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Tekrar Hoşgeldin!</h1>
+                    <p>Sitenin tüm özelliklerini kullanmak için kişisel bilgilerinizi girin</p>
+                    <button class="hidden" id="login">Giriş Yap</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Merhaba!</h1>
+                    <p>Sitenin tüm özelliklerini kullanmak için kişisel bilgilerinizi girin</p>
+                    <button class="hidden" id="register">Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
     </div>
-}
+
+    <script src="~/js/site.js"></script>
+</body>
+
+</html>

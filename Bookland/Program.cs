@@ -16,7 +16,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.LoginPath = "/Account/Login"; // Kullanıcı giriş yapmamışsa yönlendirilecek yol
-        options.LogoutPath = "/Account/Logout"; // Çıkış için yol
+        /* options.LogoutPath = "/Account/Logout"; // Çıkış için yol */
         // options.AccessDeniedPath = "/Account/AccessDenied"; // Yetkisiz erişim için yönlendirilecek yol (isteğe bağlı)
     });
 
