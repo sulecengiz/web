@@ -9,6 +9,7 @@ namespace Bookland.Models{
         public decimal Price { get; set; }
         public string? Description { get; set; } // Açıklama
         public string? ImageUrl { get; set; }
+        public long CategoryId { get; set; }
         public int Popularity { get; set; } // Popülerlik değeri (örn. satış sayısı)
     }
 }
