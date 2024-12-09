@@ -1,63 +1,98 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bookland.Models {
-    public static class SeedData {
-        public static void EnsurePopulated(IApplicationBuilder app) {
+namespace Bookland.Models
+{
+    public static class SeedData
+    {
+        public static async Task EnsurePopulated(IApplicationBuilder app)
+        {
             using var scope = app.ApplicationServices.CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<StoreDbContext>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
             // Migration'ları kontrol et ve uygula
-            if (context.Database.GetPendingMigrations().Any()) {
+            if (context.Database.GetPendingMigrations().Any())
+            {
                 context.Database.Migrate();
             }
 
-            // User tablosunda veri yoksa yeni kullanıcı ekle
-            if (!context.Users.Any()) {
-                context.Users.AddRange(
-                    new User {
-                        Username = "Jane Doe",
-                        Email = "jane.doe@example.com",
-                        Password = "1234",
-                        Phone = "123-456-7890"
-                    },
-                    new User {
-                        Username = "sulecengiz",
-                        Email = "sule@mail.com",
-                        Password = "1234",
-                        Phone = "123-456-7899"
-                    }
-                );
-
-                // Kullanıcı verilerini kaydet
-                context.SaveChanges();
+            // Kullanıcı rolü oluştur
+            if (!await roleManager.RoleExistsAsync("Admin"))
+            {
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
             }
 
-            // Product tablosunda veri yoksa yeni ürünler ekle
-            if (!context.Products.Any()) {
+            if (!await roleManager.RoleExistsAsync("User"))
+            {
+                await roleManager.CreateAsync(new IdentityRole("User"));
+            }
+
+            // Örnek bir kullanıcı ekleyin
+            if (await userManager.FindByEmailAsync("admin@bookland.com") == null)
+            {
+                var adminUser = new ApplicationUser
+                {
+                    Username = "admin",
+                    Email = "admin@bookland.com",
+                    Phone = "123-456-7890"
+                };
+
+                var result = await userManager.CreateAsync(adminUser, "Admin123!");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(adminUser, "Admin");
+                }
+            }
+
+            if (await userManager.FindByEmailAsync("sule@mail.com") == null)
+            {
+                var suleUser = new ApplicationUser
+                {
+                    Username = "sulecengiz",
+                    Email = "sule@mail.com",
+                    Phone = "123-456-7899",
+                    PasswordHash = "123456"
+                };
+
+                var result = await userManager.CreateAsync(suleUser, "User1234!");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(suleUser, "User");
+                }
+            }
+
+            // Product ve Category tablolarını kontrol et
+            if (!context.Products.Any())
+            {
                 // Önce Category tablosuna kategori ekleyelim
                 var fictionCategory = new ProductCategory { Name = "Fiction", BookCount = 0 };
                 var nonFictionCategory = new ProductCategory { Name = "Non-Fiction", BookCount = 0 };
 
-                context.ProductCategories.AddRange(fictionCategory, nonFictionCategory);
-                context.SaveChanges();
+                await context.ProductCategories.AddRangeAsync(fictionCategory, nonFictionCategory);
+                await context.SaveChangesAsync();
 
                 // Books tablosuna kitaplar ekleyelim
-                context.Products.AddRange(
-                    new Product {
+                await context.Products.AddRangeAsync(
+                    new Product
+                    {
                         Title = "Sapiens",
                         Author = "Yuval Noah Harari",
                         Price = 49.99m,
                         ImageUrl = "/images/sapiens.jpg",
-                        CategoryId = fictionCategory.ProductCategoryID  // Kategoriyi bağla
+                        CategoryId = fictionCategory.ProductCategoryID
                     },
-                    new Product {
+                    new Product
+                    {
                         Title = "1984",
                         Author = "George Orwell",
                         Price = 29.99m,
                         ImageUrl = "/images/1984.jpg",
                         CategoryId = fictionCategory.ProductCategoryID
                     },
-                    new Product {
+                    new Product
+                    {
                         Title = "Dune",
                         Author = "Frank Herbert",
                         Price = 39.99m,
@@ -65,10 +100,9 @@ namespace Bookland.Models {
                         CategoryId = fictionCategory.ProductCategoryID
                     }
                 );
-    
-                context.SaveChanges();
-            }
 
+                await context.SaveChangesAsync();
+            }
         }
     }
 }

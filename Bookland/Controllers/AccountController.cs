@@ -1,109 +1,85 @@
-using System.Diagnostics;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Bookland.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using System.Security.Claims;
-using System.Linq;
 
-namespace Bookland.Controllers
+public class AccountController : Controller
 {
-    public class AccountController : Controller
+    private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly UserManager<ApplicationUser> _userManager;
+
+    public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
     {
-        private readonly StoreDbContext _context;
+        _signInManager = signInManager;
+        _userManager = userManager;
+    }
 
-        public AccountController(StoreDbContext context)
+    [HttpGet]
+    public IActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Login(string username, string password)
+    {
+        var result = await _signInManager.PasswordSignInAsync(username, password, false, lockoutOnFailure: false);
+        if (result.Succeeded)
         {
-            _context = context;
+            return RedirectToAction("Index", "Home");
         }
 
-        // Kullanıcı girişi ve kayıt işlemleri
+        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+        return View();
+    }
 
-        // Login GET
-        [HttpGet]
-        public IActionResult Login()
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("login", "Account");
+    }
+
+    [HttpGet]
+    public IActionResult Register()
+    {
+        return View("login");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Register(string userName, string email, string password)
+    {
+        if (ModelState.IsValid)
         {
-            /* ViewBag.HideNavbar = true; */
-            return View();
-        }
-
-       // Login POST
-        [HttpPost]
-        public async Task<IActionResult> Login(string username, string password)
-        {
-            var user = _context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
-
-            if (user != null)
+            // Create a new ApplicationUser object
+            var user = new ApplicationUser
             {
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, username)
-                };
+                UserName = userName,
+                Email = email
+            };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties
-                {
-                    IsPersistent = true // Kullanıcıyı oturum açtıktan sonra hatırlamak için
-                };
+            // Create the user with the provided password
+            var result = await _userManager.CreateAsync(user, password);
 
-                // Asenkron işlem için await ekliyoruz
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+            if (result.Succeeded)
+            {
+                // Assign a role to the user (you can change "User" to a different role if needed)
+                await _userManager.AddToRoleAsync(user, "User");
 
-                // Başarılı girişte ana sayfaya yönlendir
+                // Automatically sign in the user after successful registration
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+                // Redirect to the home page or another page as per your requirements
                 return RedirectToAction("Index", "Home");
             }
 
-            // Giriş hatalı ise tekrar login sayfasına yönlendir
-            ViewBag.ErrorMessage = "Geçersiz kullanıcı adı veya şifre.";
-            
-            return View();
-        }
-
-
-        // Register GET
-        [HttpGet]
-        public IActionResult Register()
-        {
-            /* ViewBag.HideNavbar = true; */
-            return View();
-        }
-
-        // Register POST
-        [HttpPost]
-        public IActionResult Register(string Email,string Username, string Password, string ConfirmPassword)
-        {
-            if (_context.Users.Any(u => u.Username == Username))
+            // If there were errors in the registration, add them to the ModelState
+            foreach (var error in result.Errors)
             {
-                ModelState.AddModelError(string.Empty, "Bu kullanıcı adı zaten mevcut.");
-                return View();
+                ModelState.AddModelError(string.Empty, error.Description);
             }
-            if (Password != ConfirmPassword)
-            {
-                ViewBag.ErrorMessage = "Şifreler eşleşmiyor.";
-                return View();  // Hata varsa tekrar formu gösterir
-            }
-
-            // User objesini oluşturuyoruz
-            var user = new User
-            {
-                Username = Username,
-                Email = Email,
-                Password = Password
-            };
-
-            // Veritabanına ekleme işlemi
-            _context.Users.Add(user);
-            _context.SaveChanges(); // Veritabanına kaydetme
-
-            return RedirectToAction("Index", "Home");
         }
 
-
-        // Çıkış işlemi
-        public IActionResult Logout()
-        {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index", "Home");
-        }
+        // If the model is invalid, return to the registration view with the model state
+        return View();
     }
 }

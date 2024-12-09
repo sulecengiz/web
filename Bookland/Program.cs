@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Bookland.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,14 +10,24 @@ builder.Services.AddControllersWithViews();
 
 // DbContext'i kaydet
 builder.Services.AddDbContext<StoreDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Identity'yi ekleyin
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
+        options.Password.RequireDigit = true;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddEntityFrameworkStores<StoreDbContext>()
+    .AddDefaultTokenProviders();
 
 // Authentication ve Authorization servislerini ekle
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         options.LoginPath = "/Account/Login"; // Kullanıcı giriş yapmamışsa yönlendirilecek yol
-        /* options.LogoutPath = "/Account/Logout"; // Çıkış için yol */
+        options.LogoutPath = "/Account/Login"; // Çıkış için yol
         // options.AccessDeniedPath = "/Account/AccessDenied"; // Yetkisiz erişim için yönlendirilecek yol (isteğe bağlı)
     });
 
@@ -25,7 +36,7 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 // Seed data burada çalıştırılır
-SeedData.EnsurePopulated(app);
+await SeedData.EnsurePopulated(app);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -45,6 +56,6 @@ app.UseAuthorization();  // Kullanıcı yetkilendirme
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();

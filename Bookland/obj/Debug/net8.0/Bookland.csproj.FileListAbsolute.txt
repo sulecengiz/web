@@ -6,6 +6,7 @@ D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.csproj.CoreCompil
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.MvcApplicationPartsAssemblyInfo.cache
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.RazorAssemblyInfo.cache
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.RazorAssemblyInfo.cs
+D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.sourcelink.json
 D:\MasaüstüDosyaları\web\Bookland\bin\Debug\net8.0\appsettings.Development.json
 D:\MasaüstüDosyaları\web\Bookland\bin\Debug\net8.0\appsettings.json
 D:\MasaüstüDosyaları\web\Bookland\bin\Debug\net8.0\Bookland.staticwebassets.runtime.json
@@ -156,4 +157,3 @@ D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\refint\Bookland.dll
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.pdb
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.genruntimeconfig.cache
 D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\ref\Bookland.dll
-D:\MasaüstüDosyaları\web\Bookland\obj\Debug\net8.0\Bookland.sourcelink.json

@@ -1,0 +1,25 @@
+@model IEnumerable<Bookland.Models.Favorite>
+
+<h2>Favori Kitaplarım</h2>
+
+@if (Model.Any())
+{
+    <div class="row">
+        @foreach (var favorite in Model)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="@favorite.Product.ImageUrl" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">@favorite.Product.Title</h5>
+                        <p class="card-text">Yazar: @favorite.Product.Author</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Henüz favori kitabınız yok.</p>
+}

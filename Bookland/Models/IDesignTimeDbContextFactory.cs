@@ -17,7 +17,7 @@ namespace Bookland.Models
 
             var optionsBuilder = new DbContextOptionsBuilder<StoreDbContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlite(connectionString);
+            optionsBuilder.UseNpgsql(connectionString);
 
             return new StoreDbContext(optionsBuilder.Options);
         }

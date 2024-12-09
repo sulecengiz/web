@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bookland.Models{
     public class Product{
         [Key]
-        public long ProductID {get; set;}
+        public long ProductID {get; set;} 
         public string? Title { get; set; }
         public string? Author { get; set; }
         public decimal Price { get; set; }

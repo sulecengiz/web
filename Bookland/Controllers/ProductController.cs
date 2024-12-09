@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Bookland.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 public class ProductController : Controller
 {
@@ -10,6 +11,58 @@ public class ProductController : Controller
     {
         _context = context;
     }
+   [HttpPost]
+    public IActionResult AddToFavorites(int productId)
+    {
+        var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier); // Kullanıcıyı bulma
+
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return RedirectToAction("Login", "Account"); // Kullanıcı giriş yapmamışsa login sayfasına yönlendir
+        }
+
+        int userId;
+        if (!int.TryParse(userIdString, out userId))
+        {
+            return BadRequest("Geçersiz kullanıcı ID"); // Kullanıcı ID'si geçersizse hata mesajı döndür
+        }
+
+        var favorite = new Favorite
+        {
+            UserId = userId, // Kullanıcı ID'si doğru şekilde atandı
+            ProductId = productId
+        };
+
+        _context.Favorites.Add(favorite);
+        _context.SaveChanges();
+
+        return RedirectToAction("Index"); // Favoriye ekledikten sonra kitaplar sayfasına yönlendir
+    }
+
+    public IActionResult Favorites()
+    {
+        var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier); // Kullanıcı ID'sini al
+
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return RedirectToAction("Login", "Account"); // Kullanıcı giriş yapmadıysa login sayfasına yönlendir
+        }
+
+        int userId;
+        if (!int.TryParse(userIdString, out userId)) // string'i int'ye dönüştürme
+        {
+            return BadRequest("Geçersiz kullanıcı ID"); // Kullanıcı ID'si geçersizse hata mesajı döndür
+        }
+
+        var favorites = _context.Favorites
+                                .Where(f => f.UserId == userId)
+                                .Include(f => f.Product) // Kitap bilgilerini de al
+                                .ToList();
+
+        return View(favorites); // Favorileri görüntüle
+    }
+
+
     [HttpGet]
     public IActionResult Create(){
         ViewBag.Categories = _context.ProductCategories.ToList();
