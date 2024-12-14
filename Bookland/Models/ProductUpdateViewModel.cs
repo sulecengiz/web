@@ -1,6 +1,6 @@
 using Bookland.Models;
 
-namespace Bookland.ViewModels
+namespace Bookland.Models
 {
     public class ProductUpdateViewModel
     {

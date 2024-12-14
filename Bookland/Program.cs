@@ -26,8 +26,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Account/Login"; // Kullanıcı giriş yapmamışsa yönlendirilecek yol
-        options.LogoutPath = "/Account/Login"; // Çıkış için yol
+        options.LoginPath = "/Account/login"; // Kullanıcı giriş yapmamışsa yönlendirilecek yol
+        options.LogoutPath = "/Account/login"; // Çıkış için yol
         // options.AccessDeniedPath = "/Account/AccessDenied"; // Yetkisiz erişim için yönlendirilecek yol (isteğe bağlı)
     });
 
@@ -56,6 +56,6 @@ app.UseAuthorization();  // Kullanıcı yetkilendirme
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

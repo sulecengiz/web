@@ -50,10 +50,10 @@
                 <button type="submit">Giriş Yap</button>
             </form>
 
-            @if (ViewBag.ErrorMessage != null)
+            @if (ViewData["ErrorMessage"] != null)
             {
                 <div class="alert alert-danger">
-                    <p>@ViewBag.ErrorMessage</p>
+                    @ViewData["ErrorMessage"]
                 </div>
             }
         </div>

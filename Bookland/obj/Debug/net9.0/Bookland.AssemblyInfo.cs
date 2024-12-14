@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b82dcde2c833b4c6ce92b076239014e772bdb53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd03987ff5688292f84e7f043d183e3e8ab8ac43")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

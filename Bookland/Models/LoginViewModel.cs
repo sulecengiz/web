@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Bookland.ViewModels {
+namespace Bookland.Models {
     public class LoginViewModel{
         [Required]
         [Display(Name = "Username")]

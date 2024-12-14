@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Bookland.9ov5o9akeo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9ov5o9akeo"},{"Name":"integrity","Value":"sha256-matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw="},{"Name":"label","Value":"_content/Bookland/Bookland.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"702"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Dec 2024 11:23:13 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"702"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Dec 2024 07:33:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Bookland/Bookland.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Bookland.9ov5o9akeo.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"702"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Dec 2024 11:23:13 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"702"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022matcFiDKmkwcY4NE55kKeQSeLyuAVaESB3u2scYkjKw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Dec 2024 07:33:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Bookland/css/home.1d94ipy8mt.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\home.css'))</AssetFile>

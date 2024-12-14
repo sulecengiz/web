@@ -53,10 +53,9 @@ namespace Bookland.Models
                     Username = "sulecengiz",
                     Email = "sule@mail.com",
                     Phone = "123-456-7899",
-                    PasswordHash = "123456"
                 };
 
-                var result = await userManager.CreateAsync(suleUser, "User1234!");
+                var result = await userManager.CreateAsync(suleUser, "123456");
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(suleUser, "User");
