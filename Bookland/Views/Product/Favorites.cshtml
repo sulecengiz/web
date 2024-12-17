@@ -1,0 +1,33 @@
+@model IEnumerable<Bookland.Models.Favorite>
+
+<h1>Favorilerim</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Görsel</th>
+            <th>Başlık</th>
+            <th>Yazar</th>
+            <th>Fiyat</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var favorite in Model)
+        {
+            <tr>
+                
+                <td><img src="@favorite.ImageUrl" alt="@favorite.Title" style="width: 50px;" /></td>
+                <td>@favorite.Title</td>
+                <td>@favorite.Author</td>
+                <td>@favorite.Price ₺</td>
+                <td>
+                    <form asp-action="RemoveFromFavorites" method="post">
+                        <input type="hidden" name="productId" value="@favorite.ProductID" />
+                        <button type="submit" class="btn btn-danger">Favorilerden Kaldır</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

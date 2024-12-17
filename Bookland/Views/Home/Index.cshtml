@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Bookland.Models.Product>
+﻿@model IEnumerable<Bookland.Models.Product> 
+
+
 <head>
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -6,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="home">
-        mert görüyon mu
         <h1>Popüler Kitaplar</h1>
         <a class="nav-link" href="/Account/Login">Çıkış</a>
 
@@ -23,9 +25,14 @@
                             <p class="card-text">Yazar: @product.Author</p>
                             <p class="card-text">Fiyat: @product.Price ₺</p>
                             <button class="btn btn-primary">Sepete Ekle</button>
-                            <button class="btn btn-outline-danger float-end">
-                                <i class="fa fa-heart"></i>
-                            </button>
+                            
+                            <!-- Favorilere Ekle Butonu -->
+                            <form asp-controller="Product" asp-action="AddToFavorites" method="post" style="display: inline;">
+                                <input type="hidden" name="productId" value="@product.ProductID" />
+                                <button type="submit" class="btn btn-outline-danger float-end">
+                                    <i class="fa fa-heart"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -33,4 +40,3 @@
         </div>
     </div>
 </body>
-

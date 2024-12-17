@@ -11,27 +11,6 @@ namespace Bookland.Models {
                 context.Database.Migrate();
             }
 
-            // User tablosunda veri yoksa yeni kullanıcı ekle
-            if (!context.Users.Any()) {
-                context.Users.AddRange(
-                    new User {
-                        Username = "Jane Doe",
-                        Email = "jane.doe@example.com",
-                        Password = "1234",
-                        Phone = "123-456-7890"
-                    },
-                    new User {
-                        Username = "sulecengiz",
-                        Email = "sule@mail.com",
-                        Password = "1234",
-                        Phone = "123-456-7899"
-                    }
-                );
-
-                // Kullanıcı verilerini kaydet
-                context.SaveChanges();
-            }
-
             // Product tablosunda veri yoksa yeni ürünler ekle
             if (!context.Products.Any()) {
                 // Önce Category tablosuna kategori ekleyelim

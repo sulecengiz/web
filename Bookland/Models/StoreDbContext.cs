@@ -7,9 +7,7 @@ namespace Bookland.Models{
             : base(options) { }
         
         public DbSet<Product> Products => Set<Product>();
+         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
-        public DbSet<User> Users => Set<User>();
-        public DbSet<Order> Orders => Set<Order>();
-        public DbSet<OrderDetail> OrderDetails => Set<OrderDetail>();
     }
 }

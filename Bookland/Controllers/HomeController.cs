@@ -25,16 +25,6 @@ public class HomeController : Controller
         return View(books);
     }
    // Ana sayfa
-    public IActionResult Login()
-    {
-        // Kullanıcı giriş yapmamışsa login sayfasına yönlendir
-        if (!User.Identity.IsAuthenticated)
-        {
-            return RedirectToAction("Login", "Account");
-        }
-
-        // Eğer kullanıcı giriş yapmışsa, ana sayfayı göster
-        return View("Index", "Home");
-    }
+    
 
 }
