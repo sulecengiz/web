@@ -10,6 +10,9 @@ h1{
     margin-top: 2%;
     color: #3d1f01c1;
 }
+h6{
+    font-size: 17px;
+}
 .card {
     width: 220px; /* Kart genişliği */
     height: 520px; /* Kart yüksekliği */
@@ -29,6 +32,11 @@ h1{
 }
 .card-text{
     font-size: 15px;
+    font-weight: 450;
+    
+}
+#yazar{
+    font-style: italic;
 }
 .card-body {
     text-align: center;

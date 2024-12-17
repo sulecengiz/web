@@ -1,29 +1,30 @@
-﻿@model IEnumerable<Bookland.Models.Product> 
-
-
+@model IEnumerable<Bookland.Models.Product>
 <head>
-    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/home.css"/>
 </head>
+@{
+    ViewData["Title"] = "Search Results";
+}
+<div class="home">
+<h1>Arama Sonuçları</h1>
 
-<body>
-    <div class="home">
-        <h1>Popüler Kitaplar</h1>
-        <a class="nav-link" href="/Account/Login">Çıkış</a>
-
-        <div class="row">
+@if (!Model.Any())
+{
+    <p>Eşleşen kitap yok.</p>
+}
+else
+{
+    <ul>
+         <div class="row">
             @foreach (var product in Model)
             {
                 <div class="col-md-4">
                     <div class="card">
                         <img src="@product.ImageUrl" class="card-img-top" alt="@product.Title" />
                         <div class="card-body">
-                            <h6 class="card-title">@product.Title</h6>
-                            <p class="card-text" id="yazar"> @product.Author</p>
-                            <p class="card-text"> @product.Price ₺</p>
+                            <h5 class="card-title">@product.Title</h5>
+                            <p class="card-text">Yazar: @product.Author</p>
+                            <p class="card-text">Fiyat: @product.Price ₺</p>
                             <button class="btn btn-primary">Sepete Ekle</button>
                             
                             <!-- Favorilere Ekle Butonu -->
@@ -38,5 +39,6 @@
                 </div>
             }
         </div>
-    </div>
-</body>
+    </ul>
+}
+</div>

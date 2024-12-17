@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bookland.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20241217113711_InitialCreate")]
+    [Migration("20241217145842_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

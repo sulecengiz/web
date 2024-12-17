@@ -24,7 +24,4 @@ public class HomeController : Controller
 
         return View(books);
     }
-   // Ana sayfa
-    
-
 }

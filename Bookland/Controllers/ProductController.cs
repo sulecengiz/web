@@ -102,7 +102,7 @@ public class ProductController : Controller
             .Where(b => b.Title.Contains(query) || b.Author.Contains(query))
             .ToListAsync();
 
-        return View("Index", books); // Index görünümünü yeniden kullan
+        return View("Search", books); // Index görünümünü yeniden kullan
     }
 
 

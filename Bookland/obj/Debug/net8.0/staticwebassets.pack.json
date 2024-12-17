@@ -37,12 +37,36 @@
       "PackagePath": "staticwebassets\\images\\dune.jpg"
     },
     {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\fahrenheit_451.jpg",
+      "PackagePath": "staticwebassets\\images\\fahrenheit_451.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kayip_sembol.jpg",
+      "PackagePath": "staticwebassets\\images\\kayip_sembol.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kurk_mantolu.jpg",
+      "PackagePath": "staticwebassets\\images\\kurk_mantolu.jpg"
+    },
+    {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\logo.webp",
       "PackagePath": "staticwebassets\\images\\logo.webp"
     },
     {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\sapiens.jpg",
       "PackagePath": "staticwebassets\\images\\sapiens.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\savas_ve_baris.jpg",
+      "PackagePath": "staticwebassets\\images\\savas_ve_baris.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\serenad.jpg",
+      "PackagePath": "staticwebassets\\images\\serenad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\simyaci.jpg",
+      "PackagePath": "staticwebassets\\images\\simyaci.jpg"
     },
     {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\js\\site.js",

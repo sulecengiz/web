@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qhjc1fbPKYMmqvEVjmK3p0zp6P/KP+v/T/sgz2SAA4c=",
+  "Hash": "hkcV96qzvXo/llbXPRregXnifKZW7eZvUGitr/dNQyI=",
   "Source": "Bookland",
   "BasePath": "_content/Bookland",
   "Mode": "Default",
@@ -227,6 +227,69 @@
       "OriginalItemSpec": "wwwroot\\images\\dune.jpg"
     },
     {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\fahrenheit_451.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/fahrenheit_451#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "htym4f1ilb",
+      "Integrity": "O/YYEqTZyQSVxWLZE3ZTQfkg4XcCdJu7Dx5ulRtGs48=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fahrenheit_451.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kayip_sembol.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/kayip_sembol#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3zt1c662k1",
+      "Integrity": "AW4MLvFZCL+hHUqO4bL5dTSwwMHod8nNmSRtinKLlkE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kayip_sembol.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kurk_mantolu.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/kurk_mantolu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "svgxrratxs",
+      "Integrity": "SAWAdrAPrgbygE3Odx8ebbvw1OsD24mI0S8WpiEAFd8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kurk_mantolu.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\logo.webp",
       "SourceId": "Bookland",
       "SourceType": "Discovered",
@@ -267,6 +330,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sapiens.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\savas_ve_baris.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/savas_ve_baris#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qm2ymfim99",
+      "Integrity": "Lqz+ePuDVHzvmCG0XiQ8g4IaEYsYxC72TJrL0Y91hhU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\savas_ve_baris.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\serenad.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/serenad#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8gbyapovil",
+      "Integrity": "ePzrvKYJBuIAxtLZPl+v9kiXnuIbIIb2DjsBCGArCrs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\serenad.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\simyaci.jpg",
+      "SourceId": "Bookland",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\",
+      "BasePath": "_content/Bookland",
+      "RelativePath": "images/simyaci#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2w3rijj6ax",
+      "Integrity": "cnosgpBZk5IaHMv0zjTHCjo7wQ7hi+Cr56dGAMstaq0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\simyaci.jpg"
     },
     {
       "Identity": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\js\\site.js",
@@ -2309,6 +2435,252 @@
       ]
     },
     {
+      "Route": "images/fahrenheit_451.htym4f1ilb.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\fahrenheit_451.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O/YYEqTZyQSVxWLZE3ZTQfkg4XcCdJu7Dx5ulRtGs48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:49:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "htym4f1ilb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/fahrenheit_451.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O/YYEqTZyQSVxWLZE3ZTQfkg4XcCdJu7Dx5ulRtGs48="
+        }
+      ]
+    },
+    {
+      "Route": "images/fahrenheit_451.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\fahrenheit_451.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O/YYEqTZyQSVxWLZE3ZTQfkg4XcCdJu7Dx5ulRtGs48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:49:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O/YYEqTZyQSVxWLZE3ZTQfkg4XcCdJu7Dx5ulRtGs48="
+        }
+      ]
+    },
+    {
+      "Route": "images/kayip_sembol.3zt1c662k1.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kayip_sembol.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AW4MLvFZCL+hHUqO4bL5dTSwwMHod8nNmSRtinKLlkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:50:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3zt1c662k1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/kayip_sembol.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AW4MLvFZCL+hHUqO4bL5dTSwwMHod8nNmSRtinKLlkE="
+        }
+      ]
+    },
+    {
+      "Route": "images/kayip_sembol.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kayip_sembol.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AW4MLvFZCL+hHUqO4bL5dTSwwMHod8nNmSRtinKLlkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:50:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AW4MLvFZCL+hHUqO4bL5dTSwwMHod8nNmSRtinKLlkE="
+        }
+      ]
+    },
+    {
+      "Route": "images/kurk_mantolu.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kurk_mantolu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SAWAdrAPrgbygE3Odx8ebbvw1OsD24mI0S8WpiEAFd8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:47:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SAWAdrAPrgbygE3Odx8ebbvw1OsD24mI0S8WpiEAFd8="
+        }
+      ]
+    },
+    {
+      "Route": "images/kurk_mantolu.svgxrratxs.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\kurk_mantolu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SAWAdrAPrgbygE3Odx8ebbvw1OsD24mI0S8WpiEAFd8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:47:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "svgxrratxs"
+        },
+        {
+          "Name": "label",
+          "Value": "images/kurk_mantolu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SAWAdrAPrgbygE3Odx8ebbvw1OsD24mI0S8WpiEAFd8="
+        }
+      ]
+    },
+    {
       "Route": "images/logo.g9rvuhrfme.webp",
       "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\logo.webp",
       "Selectors": [],
@@ -2469,6 +2841,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-tJT7o7LSYsKVmQFBWfkYXGDfLRAlcHozEtxzAIJ0njY="
+        }
+      ]
+    },
+    {
+      "Route": "images/savas_ve_baris.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\savas_ve_baris.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lqz+ePuDVHzvmCG0XiQ8g4IaEYsYxC72TJrL0Y91hhU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:48:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lqz+ePuDVHzvmCG0XiQ8g4IaEYsYxC72TJrL0Y91hhU="
+        }
+      ]
+    },
+    {
+      "Route": "images/savas_ve_baris.qm2ymfim99.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\savas_ve_baris.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lqz+ePuDVHzvmCG0XiQ8g4IaEYsYxC72TJrL0Y91hhU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:48:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qm2ymfim99"
+        },
+        {
+          "Name": "label",
+          "Value": "images/savas_ve_baris.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lqz+ePuDVHzvmCG0XiQ8g4IaEYsYxC72TJrL0Y91hhU="
+        }
+      ]
+    },
+    {
+      "Route": "images/serenad.8gbyapovil.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\serenad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ePzrvKYJBuIAxtLZPl+v9kiXnuIbIIb2DjsBCGArCrs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 12:21:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8gbyapovil"
+        },
+        {
+          "Name": "label",
+          "Value": "images/serenad.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ePzrvKYJBuIAxtLZPl+v9kiXnuIbIIb2DjsBCGArCrs="
+        }
+      ]
+    },
+    {
+      "Route": "images/serenad.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\serenad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ePzrvKYJBuIAxtLZPl+v9kiXnuIbIIb2DjsBCGArCrs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 12:21:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ePzrvKYJBuIAxtLZPl+v9kiXnuIbIIb2DjsBCGArCrs="
+        }
+      ]
+    },
+    {
+      "Route": "images/simyaci.2w3rijj6ax.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\simyaci.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117288"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cnosgpBZk5IaHMv0zjTHCjo7wQ7hi+Cr56dGAMstaq0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:48:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2w3rijj6ax"
+        },
+        {
+          "Name": "label",
+          "Value": "images/simyaci.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cnosgpBZk5IaHMv0zjTHCjo7wQ7hi+Cr56dGAMstaq0="
+        }
+      ]
+    },
+    {
+      "Route": "images/simyaci.jpg",
+      "AssetFile": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\simyaci.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117288"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cnosgpBZk5IaHMv0zjTHCjo7wQ7hi+Cr56dGAMstaq0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 14:48:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cnosgpBZk5IaHMv0zjTHCjo7wQ7hi+Cr56dGAMstaq0="
         }
       ]
     },
