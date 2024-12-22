@@ -24,4 +24,9 @@ public class HomeController : Controller
 
         return View(books);
     }
+
+    public IActionResult About()
+    {
+        return View();
+    }
 }

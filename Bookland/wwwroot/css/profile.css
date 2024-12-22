@@ -1,0 +1,76 @@
+/* Genel stil */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5f0; /* Navbar ile uyumlu */
+    margin: 0;
+    padding: 0;
+}
+
+/* Profil sayfası ana konteyner */
+.profile-container {
+    width: 60%;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dedede;
+    position: relative;
+}
+
+/* Başlık stili */
+.profile-header {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4a4a4a;
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 15px;
+}
+
+/* Profil detayları */
+.profile-details {
+    text-align: center;
+    color: #555;
+}
+
+.profile-details img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #dedede;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.profile-details strong {
+    color: #333;
+}
+
+/* Çıkış bağlantısı */
+.logout-link {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: #d9534f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    text-decoration: underline;
+    color: #c9302c;
+}
+
+/* Hover efektleri */
+.profile-container:hover {
+    transform: translateY(-0.5em);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

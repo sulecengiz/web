@@ -9,5 +9,7 @@ namespace Bookland.Models{
         public DbSet<Product> Products => Set<Product>();
          public DbSet<Favorite> Favorites { get; set; }
         public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
+        public DbSet<CartItem> CartItems { get; set; }
+
     }
 }

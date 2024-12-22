@@ -1,18 +1,23 @@
-﻿@model IEnumerable<Bookland.Models.Product> 
+﻿@model IEnumerable<Bookland.Models.Product>
 
 
 <head>
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="bombo">
     <div class="home">
         <h1>Popüler Kitaplar</h1>
-        <a class="nav-link" href="/Account/Login">Çıkış</a>
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+        <a href="/Product/Create" id="editing">Kitap Ekle</a>
+        }
+
 
         <div class="row">
             @foreach (var product in Model)
@@ -21,22 +26,40 @@
                     <div class="card">
                         <img src="@product.ImageUrl" class="card-img-top" alt="@product.Title" />
                         <div class="card-body">
-                            <h6 class="card-title">@product.Title</h6>
-                            <p class="card-text" id="yazar"> @product.Author</p>
-                            <p class="card-text"> @product.Price ₺</p>
-                            <button class="btn btn-primary">Sepete Ekle</button>
-                            
-                            <!-- Favorilere Ekle Butonu -->
-                            <form asp-controller="Product" asp-action="AddToFavorites" method="post" style="display: inline;">
-                                <input type="hidden" name="productId" value="@product.ProductID" />
-                                <button type="submit" class="btn btn-outline-danger float-end">
-                                    <i class="fa fa-heart"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            }
+    <h6 class="card-title">@product.Title</h6>
+    <p class="card-text" id="yazar"> @product.Author</p>
+    <p class="card-text"> @product.Price ₺</p>
+    <div class="button-group">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+        <form asp-controller="Product" asp-action="Delete" method="post">
+            <input type="hidden" name="ProductID" value="@product.ProductID" />
+            <button type="submit" class="btn btn-danger">Sil</button>
+        </form>
+        }
+
+        @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+        {
+        <form asp-controller="Product" asp-action="AddToCart" method="post" style="display: inline;">
+            <input type="hidden" name="productId" value="@product.ProductID" />
+            <button type="submit" class="btn btn-primary">Sepete Ekle</button>
+        </form>
+        }
+
+         @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+        {
+        <form asp-controller="Product" asp-action="AddToFavorites" method="post" style="display: inline;">
+            <input type="hidden" name="productId" value="@product.ProductID" />
+            <button type="submit" class="btn btn-outline-danger">
+                <i class="fa fa-heart"></i>
+            </button>
+            </form>
+        }
+            </div>
+            </div> 
+            </div>
+            </div>
+        }
         </div>
     </div>
 </body>

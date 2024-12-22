@@ -18,13 +18,17 @@
         <label for="Author">Author</label>
         <input type="text" class="form-control" id="Author" name="Author" required />
     </div>
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" id="Price" name="Price" required />
+    </div>
 
     <div class="form-group">
-        <label for="CategoryId">Category</label>
-        <select class="form-control" id="CategoryId" name="CategoryId" required>
+        <label for="ProductCategoryID">Category</label>
+        <select class="form-control" id="ProductCategoryID" name="ProductCategoryID" required>
             @foreach (var category in ViewBag.Categories)
             {
-                <option value="@category.CategoryID">@category.Name</option>
+                <option value="@category.ProductCategoryID">@category.Name</option>
             }
         </select>
     </div>

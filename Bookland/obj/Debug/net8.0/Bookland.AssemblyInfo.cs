@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+676445181dee364bc59b108c3c939654893bbb5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce742e14c2004c70b1704b93e1c3a0ba6cad9085")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bookland")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

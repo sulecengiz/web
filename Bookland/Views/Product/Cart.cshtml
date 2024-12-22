@@ -1,0 +1,58 @@
+@model List<Bookland.Models.CartItem>
+
+<head>
+    <link rel="stylesheet" href="~/css/home.css"/>
+</head>
+
+<div class="home">
+    <h2>Sepetim</h2>
+    @if (Model == null || Model.Count == 0)
+    {
+        <p>Sepetinizde ürün yok.</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Görsel</th>
+                    <th>Ürün Başlığı</th>
+                    <th>Yazar</th>
+                    <th>Fiyat</th>
+                    <th>Miktar</th>
+                    <th>Toplam</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><img src="@item.ImageUrl" alt="@item.Title" style="width: 50px;" /></td>
+                        <td>@item.Title</td>
+                        <td>@item.Author</td>
+                        <td>@item.Price ₺</td>
+                        <td>@item.Quantity</td>
+                        <td>@(item.Price * item.Quantity) ₺</td>
+                        <td>
+                            <form asp-action="RemoveFromCart" method="post">
+                                <input type="hidden" name="cartItemId" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Sepet Toplam Tutarı -->
+        <div class="total-amount">
+            <h3>Toplam Tutar: 
+                @{
+                    var totalAmount = Model.Sum(item => item.Price * item.Quantity);
+                }
+                <span>@totalAmount ₺</span>
+            </h3>
+        </div>
+    }
+</div>

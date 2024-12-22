@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -67,6 +71,10 @@
     {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\simyaci.jpg",
       "PackagePath": "staticwebassets\\images\\simyaci.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\images\\user.jpg",
+      "PackagePath": "staticwebassets\\images\\user.jpg"
     },
     {
       "Id": "C:\\Users\\Selly\\OneDrive\\Masaüstü\\web\\Bookland\\wwwroot\\js\\site.js",

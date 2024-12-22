@@ -1,9 +1,20 @@
 @model Bookland.ViewModels.UserProfileViewModel
 
-<h1>Profilim</h1>
+<head>
+    <link rel="stylesheet" href="~/css/home.css" />
+    <link rel="stylesheet" href="~/css/profile.css" /> <!-- Yeni CSS dosyası -->
+</head>
 
-<div>
-    <p><strong>Kullanıcı Adı:</strong> @Model.UserName</p>
-    <p><strong>Email:</strong> @Model.Email</p>
-    <p><strong>Telefon Numarası:</strong> @Model.PhoneNumber</p>
+<div class="profile-container">
+    
+    <h1 class="profile-header">Profilim</h1>
+
+    <div class="profile-details">
+        <img id="userimg" src="/images/user.jpg" alt="">
+        <p><strong>Kullanıcı Adı:</strong> @Model.UserName</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Telefon Numarası:</strong> @Model.PhoneNumber</p>
+    </div>
+
+    <a class="logout-link" href="/Account/Login">Çıkış</a>
 </div>
