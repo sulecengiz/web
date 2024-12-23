@@ -1,57 +1,44 @@
-Bookland
+# 📚 Bookland
 
-Bookland, kitap tutkunları için modern ve kullanıcı dostu bir web uygulamasıdır. Kullanıcıların favori kitaplarını keşfetmelerine, aramalarına ve yönetmelerine olanak tanırken, alışveriş sepetine ekleme ve profillerini kişiselleştirme gibi özellikler sunar.
+Bookland, kitap severler için modern ve kullanıcı dostu bir web uygulamasıdır. Kullanıcılar, favori kitaplarını keşfedebilir, arama yapabilir, sepetlerine ekleyebilirler
 
-Özellikler
+---
 
-Kullanıcı Doğrulama: ASP.NET Identity kullanılarak güvenli giriş ve kayıt sistemi.
+## 🚀 Özellikler
 
-Arama Fonksiyonu: Kitapları doğrudan navigasyon çubuğundan arayın.
+- **🔒 Kullanıcı Kimlik Doğrulama:** ASP.NET Identity kullanılarak üvenli giriş ve kayıt sistemi.
+- **🔎 Arama İşlevi:** Kitapları doğrudan üst menüden arayın.
+- **🌟 Favoriler:** Kitapları favorilerinize kaydedin ve kolayca erişin.
+- **🛒 Alışveriş Sepeti:** İlerde satın almak istediğiniz kitapları sepetinize ekleyin.
+- **👤 Kullanıcı Profilleri:** Kişiselleştirilmiş profil alanı.
 
-Favoriler: Kitapları favoriler listenize kaydedin ve kolayca erişin.
+---
 
-Alışveriş Sepeti: Kitapları ileride satın almak için sepetinize ekleyin.
+## 🛠️ Teknolojiler
 
-Kullanıcı Profilleri: Özel bir profil bölümü ile deneyiminizi kişiselleştirin.
+| **Frontend**  | **Backend**       | **Database**  |
+|---------------|-------------------|---------------|
+| HTML          | ASP.NET MVC       | SQLite    |
+| CSS           | Entity Framework  |               |
+| JavaScript    |                   |               |
 
-Kullanılan Teknolojiler
+---
 
-Frontend:
+## 🚀 Gelecek Geliştirmeler
 
-HTML
+- Gelişmiş arama filtreleri(örn. yazara, türe göre) eklemek.
+- Kitap satın alımları için ödeme sistemi entegrasyonu sağlamak.
 
-CSS
+---
 
-JavaScript
+## 📂 Proje Yapısı
 
-Backend:
+```plaintext
+📂 Bookland
+├── 📁 Controllers       # İş mantığını yöneten denetleyiciler
+├── 📁 Models            # Veritabanı modelleri
+├── 📁 ViewModels        # Veri aktarım modelleri
+├── 📁 Views             # Razor görünümleri
+├── 📁 wwwroot           # Statik dosyalar (CSS, JS, img)
+└── 📄 Program.cs        # Uygulama başlatma dosyası
 
-ASP.NET MVC
-
-Entity Framework Core
-
-Veritabanı:
-
-SqLite
-
-Diğer Araçlar:
-
-GitHub (Versiyon kontrolü için)
-
-Visual Studio (Geliştirme için)
-
-Proje Yapısı
-
-Models: Uygulamanın temel veri modellerini içerir.
-
-ViewModels: Controller ve viewlar arasında veri taşımak için kullanılan modeller.
-
-Controllers: Farklı sayfalar ve API uç noktaları için mantığı yönetir.
-
-Views: Ön yüz kullanıcı arayüzü için Razor viewları içerir.
-
-Gelecek Geliştirmeler
-
-Gelişmiş arama filtreleri (örn. yazara, türe göre) eklenmesi.
-
-Kitap satın alımları için ödeme sistemi entegrasyonu sağlanması.
